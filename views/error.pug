@@ -1,0 +1,7 @@
+extends base
+
+block content
+    h1 #{`${error.statusCode} ${error.status}`}
+    p #{error.message || 'Something went wrong. Please try again later.'}
+    p
+        a(href="/") Go back to Home

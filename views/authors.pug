@@ -1,0 +1,13 @@
+extends base
+
+block content 
+    h1 Authors
+    ul.list-items
+        each author in authors
+            li.list-item
+                a(href=`/authors/${author.id}`) #{author.name}
+                ul
+                    each book in books
+                        if(book.author_id == author.id)
+                            li
+                                a(href=`/books/${book.id}`) #{book.title}

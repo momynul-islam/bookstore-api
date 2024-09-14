@@ -1,0 +1,20 @@
+extends base
+
+block content
+    h1= author.name
+    p
+        | Born on: #{author.birthdate}
+    if author.bio
+        h2 Biography
+        p= author.bio
+
+    if books.length > 0
+        h2 Books by #{author.name}
+        ul
+            each book in books
+                li
+                    a(href=`/books/${book.id}`) #{book.title} (Published on #{book.published_date})
+    else
+        p #{author.name} has no books yet.
+
+    a(href="/authors") Back to Authors List

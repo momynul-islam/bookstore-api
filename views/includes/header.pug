@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link(rel='stylesheet' href='/css/styles.css')
+            //- link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+    body
+        header.navbar
+            nav
+                ul
+                    li
+                        a(href="/books") Books
+                    li
+                        a(href="/authors") Authors
+                    li
+                        a(href="/create-authors") Create Author
+                    li
+                        a(href="/create-books") Create Book
+                ul
+                    li 
+                        a(href="/login") Login 
+                    li
+                        a(href='/signup') Signup 
+                    li
+                        button.logout.logoutButton Logout 
+                    li.highlight 
+                        a(href="/profile") My Profile
+

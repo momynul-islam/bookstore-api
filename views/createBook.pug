@@ -1,0 +1,21 @@
+extends base
+
+block content
+    h1 Create Book
+    form
+        div
+            label(for="title") Title:
+            input(type="text" name="title" id="title" required)
+        div
+            label(for="description") Description:
+            textarea(name="description" id="description")
+        div
+            label(for="published_date") Published Date:
+            input(type="date" name="published_date" id="published_date" required)
+        div
+            label(for="author_id") Author:
+            select.author_id(name="author_id" id="author_id" required)
+                each author in authors
+                    option(value=author.id) #{author.name}
+        div
+            button.createBookBtn.submit Create Book

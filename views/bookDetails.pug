@@ -1,0 +1,17 @@
+extends base
+
+block content
+  h1= book.title
+  p
+    | Published on: #{book.published_date}
+  p
+    | Author: 
+    a(href=`/authors/${book.author_id}`) #{book.name}
+
+  if book.description
+    h2 Description
+    p= book.description
+  else
+    p No description available for this book.
+
+  a(href="/books") Back to Books List

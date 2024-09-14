@@ -1,0 +1,16 @@
+extends base
+
+block content
+    h1 Create Author
+    form
+        div
+            label(for="name") Name:
+            input(type="text" name="name" id="name" required)
+        div
+            label(for="bio") Bio:
+            textarea(name="bio" id="bio")
+        div
+            label(for="birthdate") Birthdate:
+            input(type="date" name="birthdate" id="birthdate" required)
+        div
+            button.createAuthorBtn.submit Create Author

@@ -1,0 +1,8 @@
+extends base
+
+block content
+    h1 Books
+    ul.list-items
+        each book in books
+            li.list-item
+                a(href=`/books/${book.id}`) #{book.title}
